@@ -3,3 +3,5 @@ from  bs4 import BeautifulSoup
 
 url = "https://www.worldometers.info/coronavirus/"
 r = requests.get(url)
+s = BeautifulSoup(r.text,"html.parser")
+data = s.find_all("div",class_ = "maincounter-number")
