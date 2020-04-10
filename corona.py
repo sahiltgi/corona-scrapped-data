@@ -6,4 +6,5 @@ r = requests.get(url)
 s = BeautifulSoup(r.text,"html.parser")
 data = s.find_all("div",class_ = "maincounter-number")
 
-print("Total cases:- ",data[0].text.strip())
+print("Total Cases:- ",data[0].text.strip())
+print("Total Deaths:- ",data[1].text.strip())
